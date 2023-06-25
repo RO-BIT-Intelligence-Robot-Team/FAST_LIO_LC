@@ -17,7 +17,7 @@
     <param name="filter_size_map" type="double" value="0.2" />    <!-- 对地图的filter -->
     <param name="cube_side_length" type="double" value="1000" />
     <param name="runtime_pos_log_enable" type="bool" value="0" />
-    <param name="pcd_save_enable" type="bool" value="0" />
+    <param name="pcd_save_enable" type="bool" value="1" />
 
     <!-- visualization -->
     <param name="visulize_map" value="true"/>
@@ -32,5 +32,9 @@
     <group if="$(arg rviz)">
     <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz_fast_lio" args="-d $(find fast_lio)/rviz_cfg/loam_livox.rviz" />
     </group>
+
+    <node pkg="tf" type="static_transform_publisher" name="footprint2body" args="0 0 0 0 0 0 body base_footprint 10" />
+
+    <include file="/home/robit/catkin_ws/src/FAST_LIO_LC/PGO/launch/fastlio_velodyne_VLP_16.launch"/>
 
 </launch>

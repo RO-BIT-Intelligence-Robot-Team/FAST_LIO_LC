@@ -23,7 +23,7 @@
     <!-- <param name="sc_max_radius" type="double" value="80.0"/> for outdoor -->
 
     <!-- loop closure -->
-    <param name="historyKeyframeSearchRadius" value="1.5"/>
+    <param name="historyKeyframeSearchRadius" value="0.5"/>
     <param name="historyKeyframeSearchTimeDiff" value=" 30.0"/>
     <param name="historyKeyframeSearchNum" value="20"/>
     <param name="speedFactor" value="1"/>           <!-- 倍速因子 -->
